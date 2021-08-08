@@ -38,7 +38,13 @@ function generateGrid(container, squaresAtSide) {
 
 const btn = document.querySelector('#reset');
 btn.addEventListener('click', (e)=>{
-    squaresAtSide = prompt('Number of squares per side of Grid?')
+    let squaresAtSide = 16;
+    do {
+        squaresAtSide = prompt('Number of squares per side of Grid?\n'
+                                + '(Maximum is 100x100, but avoid going above 64x64)',
+                                '16') || 16;
+    } while (squaresAtSide < 1 || squaresAtSide > 100);
     container.textContent = ''
+
     generateGrid(container, squaresAtSide)
 });
