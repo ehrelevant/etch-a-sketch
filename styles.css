@@ -1,14 +1,19 @@
+:root {
+    --box-side: 30px;
+}
+
+
 #container {
     display: grid;
-    grid-template-columns: repeat(16, 20px);
-    grid-template-rows: repeat(16, 20px);
+    grid-template-columns: repeat(16, var(--box-side));
+    grid-template-rows: repeat(16, var(--box-side));
 }
 
 .box {
     margin: 0;
     padding: 0;
 
-    height: 20px;
-    width: 20px;
+    height: var(--box-side);
+    width: var(--box-side);
     border: 1px solid black;
 }
