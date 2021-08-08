@@ -6,6 +6,9 @@
 
 
 #container {
+    width: var(--grid-length);
+    height: var(--grid-length);
+
     display: grid;
     grid-template-columns: repeat(var(--squares-in-grid), var(--square-length));
     grid-template-rows: repeat(var(--squares-in-grid), var(--square-length));
@@ -16,5 +19,4 @@
     padding: 0;
 
     border: 1px solid black;
-    transition: 0.2s;
 }
