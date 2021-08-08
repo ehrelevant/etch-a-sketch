@@ -1,9 +1,19 @@
 :root {
-    --grid-length: 960px;
+    --grid-length: 800px;
     --squares-in-grid: 16;
-    --square-length: calc(960px / 16);
+    --square-length: calc(var(--grid-length) / 16);
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reset {
+    margin: 10px;
+}
 
 #container {
     width: var(--grid-length);
