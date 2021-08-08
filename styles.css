@@ -16,12 +16,15 @@ body {
 }
 
 #container {
+    border: 3px solid black;
     width: var(--grid-length);
     height: var(--grid-length);
 
     display: grid;
     grid-template-columns: repeat(var(--squares-in-grid), var(--square-length));
     grid-template-rows: repeat(var(--squares-in-grid), var(--square-length));
+
+    background-color: black;
 }
 
 .box {
@@ -29,4 +32,7 @@ body {
     padding: 0;
 
     border: 1px solid black;
+
+    background-color: white;
+    opacity: 1;
 }
