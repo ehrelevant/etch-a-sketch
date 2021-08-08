@@ -1,19 +1,20 @@
 :root {
-    --box-side: 30px;
+    --grid-length: 960px;
+    --squares-in-grid: 16;
+    --square-length: calc(960px / 16);
 }
 
 
 #container {
     display: grid;
-    grid-template-columns: repeat(16, var(--box-side));
-    grid-template-rows: repeat(16, var(--box-side));
+    grid-template-columns: repeat(var(--squares-in-grid), var(--square-length));
+    grid-template-rows: repeat(var(--squares-in-grid), var(--square-length));
 }
 
 .box {
     margin: 0;
     padding: 0;
 
-    height: var(--box-side);
-    width: var(--box-side);
     border: 1px solid black;
+    transition: 0.2s;
 }
