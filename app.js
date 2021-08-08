@@ -1,10 +1,13 @@
 
 const container = document.querySelector('#container');
+container.addEventListener('mouseenter', startTrail, true);
 
-generateGrid(container, 16)
+generateGrid(container, 100)
 
 function startTrail(e) {
-    e.target.style.backgroundColor = 'black'
+    if(e.target.className === 'box') {
+        e.target.style.backgroundColor = 'black';
+    }
 }
 
 function generateGrid(container, squaresAtSide) {
@@ -18,10 +21,9 @@ function generateGrid(container, squaresAtSide) {
             const box = document.createElement('div');
             box.classList.add('box');
 
-            box.setAttribute('data-x', x.toString());
-            box.setAttribute('data-y', y.toString());
+            // box.setAttribute('data-x', x.toString());
+            // box.setAttribute('data-y', y.toString());
 
-            box.addEventListener('mouseenter', startTrail);
             container.appendChild(box);
         }
     }
